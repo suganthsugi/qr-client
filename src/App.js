@@ -46,7 +46,7 @@ function App() {
   const handleClick = () => {
     fetch('https://qr-n5bh.onrender.com/new')
       .then(response => response.json())
-      .then(data => { console.log(data.id); setId(data.id);  setQr(QRCodeGenerator({url:`/form/${data.id}`}))}, setShowQr(true))
+      .then(data => { console.log(data.id); setId(data.id);  setQr(QRCodeGenerator({url:`https://gqr-client.netlify.app/form/${data.id}`}))}, setShowQr(true))
       .catch(error => console.error(error))
   }
 
